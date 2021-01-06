@@ -18,11 +18,17 @@ layoutParams = new LinearLayout.LayoutParams(
         GblFunction.getValueInDP(getApplicationContext(), 100)
 );
 ```
+[GblFunction.java](https://github.com/gzeinnumer/ImmersiveBestConfig/blob/master/README.md#gblfunction)
 
 - Set View Padding
 ```java
 LinearLayout parent = findViewById(R.id.parent);
 parent.setPadding(0, 0, 0, 0);
+```
+
+- Height actionBarSize
+```xml
+android:layout_marginTop="?attr/actionBarSize"
 ```
 
 ---
