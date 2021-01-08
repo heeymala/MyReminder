@@ -41,6 +41,32 @@ if (x != -1) str = str.substring(0,x) + str.substring(x+toRemove.length(),str.le
 Log.d(TAG, "onCreate_: " + str);
 ```
 
+- `GblVariable.myDB`
+```java
+public class GblVariabel {
+    private static final String TAG = "GblVariabel";
+
+    public static SQLiteDatabase myDb = null;
+
+    public static void initDb(Context context) {
+        DatabaseHelperOLD dbHelper = null;
+        try {
+            dbHelper = new DatabaseHelperOLD(context);
+            if (dbHelper.checkDatabase()) {
+                GblVariabel.myDb = dbHelper.openDataBase();
+            } else {
+                Log.e(TAG, "initDb:  database kosong");
+            }
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+            Log.e(TAG, "initDb: " + throwable.getMessage());
+        }
+    }
+}
+```
+[DatabaseHelper](https://github.com/gzeinnumer/MyLibSimpleSQLite/blob/master/app/src/main/java/com/gzeinnumer/mylibsimplesqlite/helper/DatabaseHelper.java)
+[DatabaseHelper Old Style](https://github.com/gzeinnumer/MyLibSimpleSQLite/blob/master/app/src/main/java/com/gzeinnumer/mylibsimplesqlite/helper/DatabaseHelper.java)
+
 ---
 
 ```
