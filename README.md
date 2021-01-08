@@ -67,6 +67,14 @@ public class GblVariabel {
 [DatabaseHelper](https://github.com/gzeinnumer/MyReminder/blob/master/files/DatabaseHelper.java)
 & [DatabaseHelper Old Style](https://github.com/gzeinnumer/MyReminder/blob/master/files/DatabaseHelperOLD.java)
 
+- External android 10 Spesial Permit
+```xml
+<application
+    android:requestLegacyExternalStorage="true">
+
+</application>
+```
+
 ---
 
 ```
