@@ -51,7 +51,7 @@ public class GblVariabel {
     public static void initDb(Context context) {
         DatabaseHelperOLD dbHelper = null;
         try {
-            dbHelper = new DatabaseHelperOLD(context);
+            dbHelper = new DatabaseHelperOLD(context);k
             if (dbHelper.checkDatabase()) {
                 GblVariabel.myDb = dbHelper.openDataBase();
             } else {
@@ -64,8 +64,8 @@ public class GblVariabel {
     }
 }
 ```
-[DatabaseHelper](https://github.com/gzeinnumer/MyLibSimpleSQLite/blob/master/app/src/main/java/com/gzeinnumer/mylibsimplesqlite/helper/DatabaseHelper.java)
-[DatabaseHelper Old Style](https://github.com/gzeinnumer/MyLibSimpleSQLite/blob/master/app/src/main/java/com/gzeinnumer/mylibsimplesqlite/helper/DatabaseHelper.java)
+[DatabaseHelper](https://github.com/gzeinnumer/MyReminder/blob/master/files/DatabaseHelper.java)
+& [DatabaseHelper Old Style](https://github.com/gzeinnumer/MyReminder/blob/master/files/DatabaseHelperOLD.java)
 
 ---
 
