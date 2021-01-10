@@ -75,6 +75,12 @@ public class GblVariabel {
 </application>
 ```
 
+- Get Color
+```java
+ColorStateList color = ContextCompat.getColor(this, R.color.white);
+Color color = Color.parseColor("#F2F5F8");
+```
+
 ---
 
 ```
