@@ -79,6 +79,17 @@ public class GblVariabel {
 ```java
 ColorStateList color = ContextCompat.getColor(this, R.color.white);
 Color color = Color.parseColor("#F2F5F8");
+int color = 0xFFCC5500;
+```
+
+- Get Drawable
+```java
+final int sdk = android.os.Build.VERSION.SDK_INT;
+if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+    layout.setBackgroundDrawable(ContextCompat.getDrawable(context, R.drawable.ready) );
+} else {
+    layout.setBackground(ContextCompat.getDrawable(context, R.drawable.ready));
+}
 ```
 
 ---
