@@ -7,7 +7,7 @@
 <item name="android:fitsSystemWindows">false</item>
 <item name="android:navigationBarColor">@color/black</item>
 ```
-
+#
 - View Height
 ```java
 LinearLayout content = findViewById(R.id.content);
@@ -19,18 +19,18 @@ layoutParams = new LinearLayout.LayoutParams(
 );
 ```
 [GblFunction.java](https://github.com/gzeinnumer/ImmersiveBestConfig/blob/master/README.md#gblfunction)
-
+#
 - Set View Padding
 ```java
 LinearLayout parent = findViewById(R.id.parent);
 parent.setPadding(0, 0, 0, 0);
 ```
-
+#
 - Height actionBarSize
 ```xml
 android:layout_marginTop="?attr/actionBarSize"
 ```
-
+#
 - Remove WORD
 ```java
 String str = "Select * FROM table1 WHERaE 1";
@@ -40,7 +40,7 @@ int x = strTemp.indexOf(toRemove);
 if (x != -1) str = str.substring(0,x) + str.substring(x+toRemove.length(),str.length());
 Log.d(TAG, "onCreate_: " + str);
 ```
-
+#
 - `GblVariable.myDB`
 ```java
 public class GblVariabel {
@@ -66,7 +66,7 @@ public class GblVariabel {
 ```
 [DatabaseHelper](https://github.com/gzeinnumer/MyReminder/blob/master/files/DatabaseHelper.java)
 & [DatabaseHelper Old Style](https://github.com/gzeinnumer/MyReminder/blob/master/files/DatabaseHelperOLD.java)
-
+#
 - External android 10 Spesial Permit
 ```xml
 <application
@@ -74,14 +74,14 @@ public class GblVariabel {
 
 </application>
 ```
-
+#
 - Get Color
 ```java
 ColorStateList color = ContextCompat.getColor(this, R.color.white);
 Color color = Color.parseColor("#F2F5F8");
 int color = 0xFFCC5500;
 ```
-
+#
 - Get Drawable
 ```java
 final int sdk = android.os.Build.VERSION.SDK_INT;
@@ -91,7 +91,7 @@ if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
     layout.setBackground(ContextCompat.getDrawable(context, R.drawable.ready));
 }
 ```
-
+#
 - TextInputLayout Hint Color
 ```xml
 <com.google.android.material.textfield.TextInputLayout
@@ -100,7 +100,7 @@ if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
     <com.google.android.material.textfield.TextInputEditText />
 </com.google.android.material.textfield.TextInputLayout>
 ```
-
+#
 - TextInputLayout Password Toggle
 ```xml
 <com.google.android.material.textfield.TextInputLayout
@@ -109,7 +109,7 @@ if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
     <com.google.android.material.textfield.TextInputEditText/>
 </com.google.android.material.textfield.TextInputLayout>
 ```
-
+#
 - Timer CountDown
 ```java
 //30 second 29 Second 28 Second ...... 1 Second
