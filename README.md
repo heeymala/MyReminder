@@ -92,6 +92,25 @@ if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
 }
 ```
 
+- TextInputLayout Hint Color
+```xml
+<com.google.android.material.textfield.TextInputLayout
+    android:textColorHint="@color/colorPrimary">
+
+    <com.google.android.material.textfield.TextInputEditText />
+</com.google.android.material.textfield.TextInputLayout>
+```
+
+- TextInputLayout Password Toggle
+```xml
+<com.google.android.material.textfield.TextInputLayout
+    app:endIconMode="password_toggle">
+
+    <com.google.android.material.textfield.TextInputEditText/>
+</com.google.android.material.textfield.TextInputLayout>
+
+```
+
 ---
 
 ```
