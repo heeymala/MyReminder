@@ -108,7 +108,22 @@ if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
 
     <com.google.android.material.textfield.TextInputEditText/>
 </com.google.android.material.textfield.TextInputLayout>
+```
 
+- Timer CountDown
+```java
+//30 second 29 Second 28 Second ...... 1 Second
+new CountDownTimer(30000, 1000) {
+
+    public void onTick(long millisUntilFinished) {
+        int progress = (int) millisUntilFinished / 1000;
+
+    }
+
+    public void onFinish() {
+
+    }
+}.start();
 ```
 
 ---
