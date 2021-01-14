@@ -2,10 +2,29 @@
  Remider Confused Program
 
 - `style.xml`
-```
+```xml
+//type 1
 <item name="android:statusBarColor" tools:targetApi="l">@android:color/white</item>
 <item name="android:fitsSystemWindows">false</item>
+
+//type 2
 <item name="android:navigationBarColor">@color/black</item>
+<item name="android:windowLightNavigationBar" tools:targetApi="27">true</item> //true = dark icon, false = light icon
+```
+```java
+int decore = -1;
+//type 1
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+    //enable this tho maker icon status bar become black
+    decore += View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+}
+
+//type 2
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+    decore +=  View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+}
+
+getWindow().getDecorView().setSystemUiVisibility(decore);
 ```
 #
 - View Height
