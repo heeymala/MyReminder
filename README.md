@@ -9,7 +9,7 @@
 
 //type 2
 <item name="android:navigationBarColor">@color/black</item>
-<item name="android:windowLightNavigationBar" tools:targetApi="27">true</item> //true = dark icon, false = light icon
+<item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
 ```
 ```java
 int decore = -1;
@@ -21,6 +21,7 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
 //type 2
 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+    //enable this tho maker icon Navigation bar become black
     decore +=  View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
 }
 
