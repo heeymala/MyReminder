@@ -125,6 +125,12 @@ new CountDownTimer(30000, 1000) {
     }
 }.start();
 ```
+#
+- adjustResize & screenOrientation
+```xml
+android:screenOrientation="portrait"
+android:windowSoftInputMode="adjustResize"
+```
 
 ---
 
