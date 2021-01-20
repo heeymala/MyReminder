@@ -151,6 +151,11 @@ new CountDownTimer(30000, 1000) {
 android:screenOrientation="portrait"
 android:windowSoftInputMode="adjustResize"
 ```
+#
+- AS
+```java
+((Module_1_ComponentProvider) getApplication()).getModule_1_Component().inject(this);
+```
 
 ---
 
