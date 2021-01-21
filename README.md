@@ -156,6 +156,21 @@ android:windowSoftInputMode="adjustResize"
 ```java
 ((Module_1_ComponentProvider) getApplication()).getModule_1_Component().inject(this);
 ```
+#
+- Remove All Space
+```java
+String s = "CREATE TABLE             table1 (" +
+        "id INTEGER            PRIMARY KEY AUTOINCREMENT, "+
+        "name TEXT, " +
+        "rating REAL, " +
+        "descr TEXT, " +
+        "flag_active INTEGER, " +
+        "created_at TEXT)";
+
+s=s.replaceAll("\\s+"," ");
+String[] parts = s.split(" ");
+Log.d(TAG, "onCreate_: "+parts[2]);
+```
 
 ---
 
