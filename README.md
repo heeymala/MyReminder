@@ -102,6 +102,13 @@ Color color = Color.parseColor("#F2F5F8");
 int color = 0xFFCC5500;
 ```
 #
+- Resource
+```java
+String string = getApplicationContext().getString(R.string.app_name);
+int color = getResources().getColor(R.color.colorPrimary);
+int color1 = ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary);
+```
+#
 - Get Drawable
 ```java
 final int sdk = android.os.Build.VERSION.SDK_INT;
@@ -137,11 +144,9 @@ new CountDownTimer(30000, 1000) {
 
     public void onTick(long millisUntilFinished) {
         int progress = (int) millisUntilFinished / 1000;
-
     }
 
     public void onFinish() {
-
     }
 }.start();
 ```
