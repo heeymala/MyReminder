@@ -171,6 +171,15 @@ s=s.replaceAll("\\s+"," ");
 String[] parts = s.split(" ");
 Log.d(TAG, "onCreate_: "+parts[2]);
 ```
+#
+- `getSupportFragmentManager()`
+```java
+Activity activity = MainActivity.this;
+FragmentTransaction transaction = ((FragmentActivity) activity).getSupportFragmentManager().beginTransaction();
+
+Class class = activity.getClass();
+new Intent(requireContext(), class)
+```
 
 ---
 
