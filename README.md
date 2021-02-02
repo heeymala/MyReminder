@@ -185,6 +185,13 @@ FragmentTransaction transaction = ((FragmentActivity) activity).getSupportFragme
 Class class = activity.getClass();
 new Intent(requireContext(), class)
 ```
+#
+- Kotlin simple get set
+```kotlin
+var TOKEN: String
+    get() = prefs.getString(KEY_TOKEN,default)
+    set(value) = prefs.edit().putString(KEY_TOKEN, value).apply()
+```
 
 ---
 
