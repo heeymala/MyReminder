@@ -192,6 +192,17 @@ var TOKEN: String
     get() = prefs.getString(KEY_TOKEN,default)
     set(value) = prefs.edit().putString(KEY_TOKEN, value).apply()
 ```
+# Shape
+```xml
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <corners android:Radius="50dp" />
+
+    <solid android:color="@color/background" />
+
+</shape>
+```
 
 ---
 
