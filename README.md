@@ -192,7 +192,8 @@ var TOKEN: String
     get() = prefs.getString(KEY_TOKEN,default)
     set(value) = prefs.edit().putString(KEY_TOKEN, value).apply()
 ```
-# Shape
+#
+- Shape
 ```xml
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
@@ -202,6 +203,15 @@ var TOKEN: String
     <solid android:color="@color/background" />
 
 </shape>
+```
+#
+- TextView Color Default
+```xml
+android:textColor="@android:color/tab_indicator_text"
+
+//or
+
+#808080
 ```
 
 ---
