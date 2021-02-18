@@ -214,6 +214,42 @@ android:textColor="@android:color/tab_indicator_text"
 #808080
 ```
 
+#
+- Remove new
+```java
+public class ValidatorValue {
+
+    @SuppressLint("StaticFieldLeak") static volatile ValidatorValue singleton = null;
+
+    public static ValidatorValue get() {
+        if (singleton == null) {
+            synchronized (ValidatorValue.class) {
+                if (singleton == null) {
+                    if (ValidatorValue.context == null) {
+                        throw new IllegalStateException("context == null");
+                    }
+                    singleton = new ValidatorValue(ValidatorValue.context).build();
+                }
+            }
+        }
+        return singleton;
+    }
+
+    static Context context;
+
+    public ValidatorValue(Context context) {
+        this.context = context;
+    }
+
+    public ValidatorValue build() {
+        return this;
+    }
+}
+```
+```java
+ValidatorValue.with(getApplicationContext()).build();
+```
+
 ---
 
 ```
