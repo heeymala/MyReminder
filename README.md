@@ -261,6 +261,14 @@ if (isSystem24Hour){
 }
 ```
 
+#### Split String
+```java
+String currentString = "Fruit: they taste good";
+String[] separated = currentString.split(":");
+separated[0]; // this will contain "Fruit"
+separated[1]; // this will contain " they taste good"
+```
+
 ---
 
 ```
