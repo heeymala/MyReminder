@@ -1,7 +1,7 @@
 # MyReminder
  Remider Confused Program
 
-- `style.xml`
+#### `style.xml`
 ```xml
 //type 1
 <item name="android:statusBarColor" tools:targetApi="l">@android:color/white</item>
@@ -28,7 +28,7 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 getWindow().getDecorView().setSystemUiVisibility(decore);
 ```
 #
-- View Height
+#### View Height
 ```java
 LinearLayout content = findViewById(R.id.content);
 LinearLayout.LayoutParams layoutParams;
@@ -40,18 +40,18 @@ layoutParams = new LinearLayout.LayoutParams(
 ```
 [GblFunction.java](https://github.com/gzeinnumer/ImmersiveBestConfig/blob/master/README.md#gblfunction)
 #
-- Set View Padding
+#### Set View Padding
 ```java
 LinearLayout parent = findViewById(R.id.parent);
 parent.setPadding(0, 0, 0, 0);
 ```
 #
-- Height actionBarSize
+#### Height actionBarSize
 ```xml
 android:layout_marginTop="?attr/actionBarSize"
 ```
 #
-- Remove WORD
+#### Remove WORD
 ```java
 String str = "Select * FROM table1 WHERaE 1";
 String strTemp = str.toUpperCase();
@@ -61,7 +61,7 @@ if (x != -1) str = str.substring(0,x) + str.substring(x+toRemove.length(),str.le
 Log.d(TAG, "onCreate_: " + str);
 ```
 #
-- `GblVariable.myDB`
+#### `GblVariable.myDB`
 ```java
 public class GblVariabel {
     private static final String TAG = "GblVariabel";
@@ -87,7 +87,7 @@ public class GblVariabel {
 [DatabaseHelper](https://github.com/gzeinnumer/MyReminder/blob/master/files/DatabaseHelper.java)
 & [DatabaseHelper Old Style](https://github.com/gzeinnumer/MyReminder/blob/master/files/DatabaseHelperOLD.java)
 #
-- External android 10 Spesial Permit
+#### External android 10 Spesial Permit
 ```xml
 <application
     android:requestLegacyExternalStorage="true">
@@ -95,21 +95,21 @@ public class GblVariabel {
 </application>
 ```
 #
-- Get Color
+#### Get Color
 ```java
 ColorStateList color = ContextCompat.getColorStateList(this, R.color.white);
 Color color = Color.parseColor("#F2F5F8");
 int color = 0xFFCC5500;
 ```
 #
-- Resource
+#### Resource
 ```java
 String string = getApplicationContext().getString(R.string.app_name);
 int color = getResources().getColor(R.color.colorPrimary);
 int color1 = ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary);
 ```
 #
-- Get Drawable
+#### Get Drawable
 ```java
 final int sdk = android.os.Build.VERSION.SDK_INT;
 if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
@@ -119,7 +119,7 @@ if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
 }
 ```
 #
-- TextInputLayout Hint Color
+#### TextInputLayout Hint Color
 ```xml
 <com.google.android.material.textfield.TextInputLayout
     android:textColorHint="@color/colorPrimary">
@@ -128,7 +128,7 @@ if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
 </com.google.android.material.textfield.TextInputLayout>
 ```
 #
-- TextInputLayout Password Toggle
+#### TextInputLayout Password Toggle
 ```xml
 <com.google.android.material.textfield.TextInputLayout
     app:endIconMode="password_toggle">
@@ -137,7 +137,7 @@ if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
 </com.google.android.material.textfield.TextInputLayout>
 ```
 #
-- Timer CountDown
+#### Timer CountDown
 ```java
 //30 second 29 Second 28 Second ...... 1 Second
 new CountDownTimer(30000, 1000) {
@@ -151,18 +151,18 @@ new CountDownTimer(30000, 1000) {
 }.start();
 ```
 #
-- adjustResize & screenOrientation
+#### adjustResize & screenOrientation
 ```xml
 android:screenOrientation="portrait"
 android:windowSoftInputMode="adjustResize"
 ```
 #
-- AS
+#### AS
 ```java
 ((Module_1_ComponentProvider) getApplication()).getModule_1_Component().inject(this);
 ```
 #
-- Remove All Space
+#### Remove All Space
 ```java
 String s = "CREATE TABLE             table1 (" +
         "id INTEGER            PRIMARY KEY AUTOINCREMENT, "+
@@ -177,7 +177,7 @@ String[] parts = s.split(" ");
 Log.d(TAG, "onCreate_: "+parts[2]);
 ```
 #
-- `getSupportFragmentManager()`
+#### `getSupportFragmentManager()`
 ```java
 Activity activity = MainActivity.this;
 FragmentTransaction transaction = ((FragmentActivity) activity).getSupportFragmentManager().beginTransaction();
@@ -186,14 +186,14 @@ Class class = activity.getClass();
 new Intent(requireContext(), class)
 ```
 #
-- Kotlin simple get set
+#### Kotlin simple get set
 ```kotlin
 var TOKEN: String
     get() = prefs.getString(KEY_TOKEN,default)
     set(value) = prefs.edit().putString(KEY_TOKEN, value).apply()
 ```
 #
-- Shape
+#### Shape
 ```xml
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
@@ -205,7 +205,7 @@ var TOKEN: String
 </shape>
 ```
 #
-- TextView Color Default
+#### TextView Color Default
 ```xml
 android:textColor="@android:color/tab_indicator_text"
 
@@ -215,7 +215,7 @@ android:textColor="@android:color/tab_indicator_text"
 ```
 
 #
-- Remove new
+#### Remove new
 ```java
 public class ValidatorValue {
 
@@ -248,6 +248,17 @@ public class ValidatorValue {
 ```
 ```java
 ValidatorValue.with(getApplicationContext()).build();
+```
+
+#### TimeFormat 12/24
+```java
+boolean isSystem24Hour = DateFormat.is24HourFormat(getApplicationContext());
+int clockFormat;
+if (isSystem24Hour){
+    clockFormat = TimeFormat.CLOCK_24H;
+} else {
+    clockFormat = TimeFormat.CLOCK_12H;
+}
 ```
 
 ---
