@@ -278,6 +278,11 @@ if (holder.number.getText().length() > 0 && holder.number.getText().toString().e
 }
 ```
 
+#### RecyclerView Big Cached
+```java
+binding.rvData.setItemViewCacheSize(100);
+```
+
 ---
 
 ```
