@@ -271,6 +271,17 @@ separated[1]; // this will contain " they taste good"
 
 ---
 
+#### Last . Checked
+```java
+if (holder.number.getText().length() > 0 && holder.number.getText().toString().endsWith(".")){
+    holder.numberP.setError("Format salah");
+    isDone = false;
+    break;
+}
+```
+
+---
+
 ```
 Copyright 2021 M. Fadli Zein
 ```
