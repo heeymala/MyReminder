@@ -283,6 +283,15 @@ if (holder.number.getText().length() > 0 && holder.number.getText().toString().e
 binding.rvData.setItemViewCacheSize(100);
 ```
 
+#### EditText Attribute
+```java
+holder.numberP.setSuffixText("%");
+holder.numberP.setHint("Percentace");
+holder.number.setFilters(new InputFilter[]{new InputFilter.LengthFilter(3)});
+holder.number.setInputType(InputType.TYPE_CLASS_NUMBER);
+holder.number.setKeyListener(DigitsKeyListener.getInstance("123456789"));
+```
+
 ---
 
 ```
