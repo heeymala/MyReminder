@@ -283,6 +283,11 @@ if (holder.number.getText().length() > 0 && holder.number.getText().toString().e
 binding.rvData.setItemViewCacheSize(100);
 ```
 
+#### RecyclerView Divider
+```java
+binding.rv.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+```
+
 #### EditText Attribute
 ```java
 holder.numberP.setSuffixText("%");
