@@ -311,6 +311,14 @@ editTexts.addTextChangedListener(new SimpleTextWatcher(s -> {
 }));
 ```
 
+#### Intent to GMaps
+```java
+Uri gmmIntentUri = Uri.parse("http://maps.google.com/maps?saddr="+Olatitude+","+Olongitude+"&daddr="+Dlatitude+","+Dlongitude+"");
+Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+mapIntent.setPackage("com.google.android.apps.maps");
+startActivity(mapIntent);
+```
+
 ---
 
 ```
