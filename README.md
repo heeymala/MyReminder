@@ -297,6 +297,20 @@ holder.number.setInputType(InputType.TYPE_CLASS_NUMBER);
 holder.number.setKeyListener(DigitsKeyListener.getInstance("123456789"));
 ```
 
+#### Disable 0 First
+```java
+//maven { url "https://jitpack.io" }
+//implementation 'com.github.gzeinnumer:MyLibSimpleTextWatcher:1.0.1'
+
+editTexts.addTextChangedListener(new SimpleTextWatcher(s -> {
+    if (s.length() > 0 && s.toString().charAt(0) == '0') {
+        final String newText = s.toString().substring(1);
+        editTexts.setText(newText);
+        editTexts.setSelection(newText.length());
+    }
+}));
+```
+
 ---
 
 ```
