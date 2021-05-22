@@ -213,7 +213,6 @@ android:textColor="@android:color/tab_indicator_text"
 
 #808080
 ```
-
 #
 #### Remove new
 ```java
@@ -249,7 +248,7 @@ public class ValidatorValue {
 ```java
 ValidatorValue.with(getApplicationContext()).build();
 ```
-
+#
 #### TimeFormat 12/24
 ```java
 boolean isSystem24Hour = DateFormat.is24HourFormat(getApplicationContext());
@@ -260,7 +259,7 @@ if (isSystem24Hour){
     clockFormat = TimeFormat.CLOCK_12H;
 }
 ```
-
+#
 #### Split String
 ```java
 String currentString = "Fruit: they taste good";
@@ -268,7 +267,7 @@ String[] separated = currentString.split(":");
 separated[0]; // this will contain "Fruit"
 separated[1]; // this will contain " they taste good"
 ```
-
+#
 #### Last . Checked
 ```java
 if (holder.number.getText().length() > 0 && holder.number.getText().toString().endsWith(".")){
@@ -277,7 +276,7 @@ if (holder.number.getText().length() > 0 && holder.number.getText().toString().e
     break;
 }
 ```
-
+#
 #### RecyclerView Big Cached
 ```java
 binding.rvData.setItemViewCacheSize(100);
@@ -287,7 +286,7 @@ binding.rvData.setItemViewCacheSize(100);
 ```java
 binding.rv.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 ```
-
+#
 #### EditText Attribute
 ```java
 holder.numberP.setSuffixText("%");
@@ -296,7 +295,7 @@ holder.number.setFilters(new InputFilter[]{new InputFilter.LengthFilter(3)});
 holder.number.setInputType(InputType.TYPE_CLASS_NUMBER);
 holder.number.setKeyListener(DigitsKeyListener.getInstance("123456789"));
 ```
-
+#
 #### Disable 0 First
 ```java
 //maven { url "https://jitpack.io" }
@@ -310,7 +309,7 @@ editTexts.addTextChangedListener(new SimpleTextWatcher(s -> {
     }
 }));
 ```
-
+#
 #### Intent to GMaps
 ```java
 Uri gmmIntentUri = Uri.parse("http://maps.google.com/maps?saddr="+Olatitude+","+Olongitude+"&daddr="+Dlatitude+","+Dlongitude+"");
@@ -318,7 +317,7 @@ Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
 mapIntent.setPackage("com.google.android.apps.maps");
 startActivity(mapIntent);
 ```
-
+#
 #### Read JSON From Assets
 ```java
 //readFile(MainActivity.this, "raw/my_json.json");
@@ -337,7 +336,7 @@ public static String readFile(Activity activity, String fileName) {
     return content.toString();
 }
 ```
-
+#
 #### Read Image From Assets
 ```java
 try {
