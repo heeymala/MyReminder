@@ -319,6 +319,42 @@ mapIntent.setPackage("com.google.android.apps.maps");
 startActivity(mapIntent);
 ```
 
+#### Read JSON From Assets
+```java
+//readFile(MainActivity.this, "raw/my_json.json");
+public static String readFile(Activity activity, String fileName) {
+    BufferedReader reader;
+    StringBuilder content = new StringBuilder();
+    try {
+        reader = new BufferedReader(new InputStreamReader(activity.getAssets().open(fileName), "UTF-8"));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            content.append(line.trim());
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    return content.toString();
+}
+```
+
+#### Read Image From Assets
+```java
+try {
+    // get input stream
+    InputStream ims = getAssets().open("avatar.jpg");
+    // load image as Drawable
+    Drawable d = Drawable.createFromStream(ims, null);
+    // set image to ImageView
+    mImage.setImageDrawable(d);
+  ims .close();
+}
+catch(IOException ex)
+{
+    return;
+}
+```
+
 ---
 
 ```
