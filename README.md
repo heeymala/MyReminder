@@ -353,6 +353,12 @@ catch(IOException ex)
     return;
 }
 ```
+#
+#### setBackgroundResource programatically
+```java
+bindingItem.tvStatus.setText("Open");
+bindingItem.tvStatus.setBackgroundResource(R.drawable.shape_green);
+```
 
 ---
 
