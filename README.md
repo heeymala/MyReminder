@@ -153,8 +153,10 @@ new CountDownTimer(30000, 1000) {
 #
 #### adjustResize & screenOrientation
 ```xml
-android:screenOrientation="portrait"
-android:windowSoftInputMode="adjustResize"
+<activity
+    android:name=".MainActivity"
+    android:screenOrientation="portrait"
+    android:windowSoftInputMode="adjustResize" />
 ```
 #
 #### AS
@@ -360,7 +362,7 @@ bindingItem.tvStatus.setText("Open");
 bindingItem.tvStatus.setBackgroundResource(R.drawable.shape_green);
 ```
 
----
+---q    qwwww
 
 ```
 Copyright 2021 M. Fadli Zein
