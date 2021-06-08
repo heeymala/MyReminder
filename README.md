@@ -283,7 +283,7 @@ if (holder.number.getText().length() > 0 && holder.number.getText().toString().e
 ```java
 binding.rvData.setItemViewCacheSize(100);
 ```
-
+#
 #### RecyclerView Divider
 ```java
 binding.rv.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
