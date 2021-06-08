@@ -361,8 +361,26 @@ catch(IOException ex)
 bindingItem.tvStatus.setText("Open");
 bindingItem.tvStatus.setBackgroundResource(R.drawable.shape_green);
 ```
+#
+#### ShapeTextView
+```xml
+<TextView
+    android:background="@drawable/shape_green"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
+    android:text="Open"
+    android:textColor="@android:color/white" />
+```
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="5dp" />
+    <solid android:color="@color/green_500" />
+</shape>
+```
 
----q    qwwww
+---
 
 ```
 Copyright 2021 M. Fadli Zein
