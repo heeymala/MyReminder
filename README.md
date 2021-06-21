@@ -289,6 +289,33 @@ binding.rvData.setItemViewCacheSize(100);
 binding.rv.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 ```
 #
+#### RecyclerView Keep Value On Model And Show
+```java
+public class DummyAdapter extends RecyclerView.Adapter<DummyAdapter.ViewHolder> {
+
+    ...
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position) {
+        holder.binding.tvName.setText(items.get(position).itemcode);
+        if (items.get(position).qty != null && items.get(position).qty.length() > 0){
+            holder.binding.edQty.setText(items.get(position).qty);
+        }else {
+            holder.binding.edQty.setText("");
+        }
+    }
+
+    @Override
+    public void onViewRecycled(@NonNull ViewHolder holder) {
+        super.onViewRecycled(holder);
+        int index = holder.getAdapterPosition();
+        if (index >= 0) {
+            items.get(index).qty = holder.binding.edQty.getText().toString();
+        }
+    }
+}
+```
+#
 #### EditText Attribute
 ```java
 holder.numberP.setSuffixText("%");
