@@ -413,6 +413,9 @@ insert into api_response
 select * from buang_api_response a
 where not EXISTS (select 1 from api_response b where a.id=b.id);
 ```
+#
+#### Koltin Configuration
+![]()
 
 ---
 
