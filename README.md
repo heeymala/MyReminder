@@ -415,6 +415,7 @@ where not EXISTS (select 1 from api_response b where a.id=b.id);
 ```
 #
 #### Koltin Configuration
+
 ![](https://github.com/gzeinnumer/MyReminder/blob/master/preview/example1.jpg)
 
 ---
