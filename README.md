@@ -417,6 +417,15 @@ where not EXISTS (select 1 from api_response b where a.id=b.id);
 #### Koltin Configuration
 
 ![](https://github.com/gzeinnumer/MyReminder/blob/master/preview/example1.jpg)
+#
+#### Http Save Log
+```java
+HttpLoggingInterceptor logging = new HttpLoggingInterceptor(new Logger() {
+  @Override public void log(String message) {
+    Timber.tag("OkHttp").d(message);
+  }
+});
+```
 
 ---
 
