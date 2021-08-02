@@ -339,7 +339,7 @@ editTexts.addTextChangedListener(new SimpleTextWatcher(s -> {
 }));
 ```
 #
-#### Disable 0 First
+#### Disable Space First
 ```java
 //maven { url "https://jitpack.io" }
 //implementation 'com.github.gzeinnumer:MyLibSimpleTextWatcher:1.0.1'
@@ -350,7 +350,7 @@ editTexts.addTextChangedListener(new SimpleTextWatcher(s -> {
         editTexts.setText(newText);
         editTexts.setSelection(newText.length());
     } else {
-        srVM.setFindings(s.toString());
+        srVM.setValue(s.toString());
     }
 }));
 ```
