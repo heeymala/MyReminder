@@ -339,6 +339,22 @@ editTexts.addTextChangedListener(new SimpleTextWatcher(s -> {
 }));
 ```
 #
+#### Disable 0 First
+```java
+//maven { url "https://jitpack.io" }
+//implementation 'com.github.gzeinnumer:MyLibSimpleTextWatcher:1.0.1'
+
+editTexts.addTextChangedListener(new SimpleTextWatcher(s -> {
+    if (s.length() > 0 && s.toString().charAt(0) == ' ') {
+        final String newText = s.toString().substring(1);
+        editTexts.setText(newText);
+        editTexts.setSelection(newText.length());
+    } else {
+        srVM.setFindings(s.toString());
+    }
+}));
+```
+#
 #### Intent to GMaps
 ```java
 Uri gmmIntentUri = Uri.parse("http://maps.google.com/maps?saddr="+Olatitude+","+Olongitude+"&daddr="+Dlatitude+","+Dlongitude+"");
