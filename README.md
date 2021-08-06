@@ -452,17 +452,17 @@ myImgView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_arro
 #### Get Date Range
 ```java
 Calendar mCalendar = Calendar.getInstance();
-int remainingDay = mCalendar.getActualMaximum(Calendar.DAY_OF_MONTH) - mCalendar.get(Calendar.DAY_OF_MONTH) + 1;
+//int remainingDay = mCalendar.getActualMaximum(Calendar.DAY_OF_MONTH) - mCalendar.get(Calendar.DAY_OF_MONTH) + 1;
 int remainingDay = 7;
 ArrayList<String> allDays = new ArrayList<String>();
 SimpleDateFormat mFormat = new SimpleDateFormat("YYYY-MM-dd");
 for(int i = 0; i < remainingDay; i++){
     // Add day to list
-    allDays.add(mFormat.format(mCalendar.getTime())+"\n");
+    allDays.add(mFormat.format(mCalendar.getTime()));
     // Move pref day
     mCalendar.add(Calendar.DAY_OF_MONTH, -1);
     // Move next day
-    mCalendar.add(Calendar.DAY_OF_MONTH, 1);
+    //mCalendar.add(Calendar.DAY_OF_MONTH, 1);
 }
 
 Log.d(getClass().getSimpleName(), "on_Create: "+allDays.toString());
