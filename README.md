@@ -467,6 +467,20 @@ for(int i = 0; i < remainingDay; i++){
 
 Log.d(getClass().getSimpleName(), "on_Create: "+allDays.toString());
 ```
+#
+#### Get Date Range
+```java
+public int createRandomCode(int codeLength) {
+    char[] chars = "1234567890".toCharArray();
+    StringBuilder sb = new StringBuilder();
+    Random random = new SecureRandom();
+    for (int i = 0; i < codeLength; i++) {
+        char c = chars[random.nextInt(chars.length)];
+        sb.append(c);
+    }
+    return Integer.parseInt(sb.toString());
+}
+```
 
 ---
 
