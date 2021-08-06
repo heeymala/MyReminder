@@ -468,7 +468,7 @@ for(int i = 0; i < remainingDay; i++){
 Log.d(getClass().getSimpleName(), "on_Create: "+allDays.toString());
 ```
 #
-#### Get Date Range
+#### Create Random Code
 ```java
 public int createRandomCode(int codeLength) {
     char[] chars = "1234567890".toCharArray();
