@@ -501,9 +501,8 @@ List<Object> lstObject = gson.fromJson(json_ string, Object.class);
 #
 #### Object ToJson - Json ToObject
 ```java
-@Headers("token: igskao2020")
-@POST("api/save-travelling")
-Flowable<Response<BaseResponseKao>> sendTraveling2(@Body Trans_H_Travelling trans_h_travelling);
+@POST("api/save")
+Flowable<Response<BaseResponseKao>> sendTraveling2(@Body Trans_H trans_h);
 ```
 ```java
 apiService.sendData(data)
