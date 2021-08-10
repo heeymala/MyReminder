@@ -537,6 +537,8 @@ private String bodyToString(final RequestBody request) {
 }
 ```
 ```java
+//implementation 'com.squareup.retrofit2:retrofit:2.8.1'
+
 public String requestToString(Response response) {
     String msg = "";
 
