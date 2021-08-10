@@ -505,21 +505,21 @@ List<Object> lstObject = gson.fromJson(json_ string, Object.class);
 Flowable<Response<BaseResponseKao>> sendTraveling2(@Body Trans_H trans_h);
 ```
 ```java
+String request = gson.toJson(data);
 apiService.sendData(data)
         .subscribe(new Consumer<Response<BaseResponseKao>>() {
             @Override
             public void accept(Response<BaseResponseKao> response) throws Exception {
-                Toast.makeText(SentManualActivity.this, "_"+response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                Toast.makeText(SentManualActivity.this, "_"+response.code(), Toast.LENGTH_SHORT).show();
-                Toast.makeText(SentManualActivity.this, "_"+response.headers(), Toast.LENGTH_SHORT).show();
-                Toast.makeText(SentManualActivity.this, "_"+response.raw().request().url(), Toast.LENGTH_SHORT).show();
-                Toast.makeText(SentManualActivity.this, "_"+response.raw().request().method(), Toast.LENGTH_SHORT).show();
-                Toast.makeText(SentManualActivity.this, "_"+response.raw().request().headers(), Toast.LENGTH_SHORT).show();
-                Toast.makeText(SentManualActivity.this, "_"+bodyToString(response.raw().request().body()), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "_"+response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "_"+response.code(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "_"+response.headers(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "_"+response.raw().request().url(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "_"+response.raw().request().method(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "_"+response.raw().request().headers(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "_"+bodyToString(response.raw().request().body()), Toast.LENGTH_SHORT).show();
             }
         }, throwable -> {
 
-        }
         });
 
 private String bodyToString(final RequestBody request) {
@@ -542,13 +542,13 @@ private String bodyToString(final RequestBody request) {
 public String requestToString(Response response) {
     String msg = "";
 
-    msg+="Response : "+response.body().toString();
-    msg+="Code     : "+ response.code();
-    msg+="Headers  : "+response.headers().toString();
-    msg+="URL      : "+response.raw().request().url();
-    msg+="Method   : "+response.raw().request().method();
-    msg+="Token    : "+response.raw().request().headers();
-    msg+="Request  : "+bodyToString(response.raw().request().body());
+    msg+="\nCode : "+ response.code();
+    msg+="\nMethod : "+response.raw().request().method();
+    msg+="\nURL : "+response.raw().request().url();
+    //msg+="\nHeaders :\n "+response.headers().toString();
+    //msg+="\nToken :\n "+response.raw().request().headers();
+    msg+="\nResponse :\n"+response.body().toString();
+    msg+="\n\nRequest :\n "+bodyToString(response.raw().request().body());
 
     return msg;
 }
