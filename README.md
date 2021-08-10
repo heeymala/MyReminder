@@ -536,6 +536,21 @@ private String bodyToString(final RequestBody request) {
     }
 }
 ```
+```java
+public String requestToString(Response response) {
+    String msg = "";
+
+    msg+="Response : "+response.body().toString();
+    msg+="Code     : "+ response.code();
+    msg+="Headers  : "+response.headers().toString();
+    msg+="URL      : "+response.raw().request().url();
+    msg+="Method   : "+response.raw().request().method();
+    msg+="Token    : "+response.raw().request().headers();
+    msg+="Request  : "+bodyToString(response.raw().request().body());
+
+    return msg;
+}
+```
 
 ---
 
