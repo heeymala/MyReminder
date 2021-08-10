@@ -498,6 +498,45 @@ Log.d(getClass().getSimpleName(), "onCre_ate: "+gson.toJson(read.get(i)));
 String json = string_json;
 List<Object> lstObject = gson.fromJson(json_ string, Object.class);
 ```
+#
+#### Object ToJson - Json ToObject
+```java
+@Headers("token: igskao2020")
+@POST("api/save-travelling")
+Flowable<Response<BaseResponseKao>> sendTraveling2(@Body Trans_H_Travelling trans_h_travelling);
+```
+```java
+apiService.sendData(data)
+        .subscribe(new Consumer<Response<BaseResponseKao>>() {
+            @Override
+            public void accept(Response<BaseResponseKao> response) throws Exception {
+                Toast.makeText(SentManualActivity.this, "_"+response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(SentManualActivity.this, "_"+response.code(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(SentManualActivity.this, "_"+response.headers(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(SentManualActivity.this, "_"+response.raw().request().url(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(SentManualActivity.this, "_"+response.raw().request().method(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(SentManualActivity.this, "_"+response.raw().request().headers(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(SentManualActivity.this, "_"+bodyToString(response.raw().request().body()), Toast.LENGTH_SHORT).show();
+            }
+        }, throwable -> {
+
+        }
+        });
+
+private String bodyToString(final RequestBody request) {
+    try {
+        final RequestBody copy = request;
+        final Buffer buffer = new Buffer();
+        if (copy != null)
+            copy.writeTo(buffer);
+        else
+            return "";
+        return buffer.readUtf8();
+    } catch (final IOException e) {
+        return "did not work";
+    }
+}
+```
 
 ---
 
