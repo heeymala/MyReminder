@@ -481,6 +481,23 @@ public int createRandomCode(int codeLength) {
     return Integer.parseInt(sb.toString());
 }
 ```
+#
+#### Object ToJson - Json ToObject
+```java
+Log.d(getClass().getSimpleName(), "onCre_ate: "+read.get(i).toJson());
+
+public String toJson() {
+    return new GsonBuilder().create().toJson(this, Table1.class);
+}
+```
+```java
+Gson gson = new Gson();
+Log.d(getClass().getSimpleName(), "onCre_ate: "+gson.toJson(read.get(i)));
+```
+```java
+String json = string_json;
+List<Object> lstObject = gson.fromJson(json_ string, Object.class);
+```
 
 ---
 
