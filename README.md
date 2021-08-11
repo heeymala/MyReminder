@@ -554,6 +554,25 @@ public String requestToString(Response response) {
     return msg;
 }
 ```
+#
+#### CI3 CI4 CodeIgnither
+
+- CI3
+```php
+soon
+```
+
+CI4
+```php
+$query = "SELECT * FROM product;";
+$db = \Config\Database::connect();
+$data = $db->query($query);
+
+// return json_encode($data->getResult());
+// return json_encode($query->getResultArray());
+// return json_encode($query->getRow());
+return $this->respond($data->getResult());
+```
 
 ---
 
