@@ -507,21 +507,22 @@ Flowable<Response<BaseResponseKao>> sendTraveling2(@Body Trans_H trans_h);
 ```java
 String request = gson.toJson(data);
 apiService.sendData(data)
-        .subscribe(new Consumer<Response<BaseResponseKao>>() {
-            @Override
-            public void accept(Response<BaseResponseKao> response) throws Exception {
-                Toast.makeText(this, "_"+response.body().getMessage(), Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, "_"+response.code(), Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, "_"+response.headers(), Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, "_"+response.raw().request().url(), Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, "_"+response.raw().request().method(), Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, "_"+response.raw().request().headers(), Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, "_"+bodyToString(response.raw().request().body()), Toast.LENGTH_SHORT).show();
-            }
-        }, throwable -> {
+    .subscribe(new Consumer<Response<BaseResponseKao>>() {
+        @Override
+        public void accept(Response<BaseResponseKao> response) throws Exception {
+            Toast.makeText(this, "_"+response.body().getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "_"+response.code(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "_"+response.headers(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "_"+response.raw().request().url(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "_"+response.raw().request().method(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "_"+response.raw().request().headers(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "_"+bodyToString(response.raw().request().body()), Toast.LENGTH_SHORT).show();
+        }
+    }, throwable -> {
 
-        });
-
+    });
+```
+```java
 private String bodyToString(final RequestBody request) {
     try {
         final RequestBody copy = request;
