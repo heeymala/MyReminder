@@ -562,7 +562,7 @@ public String requestToString(Response response) {
 soon
 ```
 
-CI4
+- CI4
 ```php
 $query = "SELECT * FROM product;";
 $db = \Config\Database::connect();
