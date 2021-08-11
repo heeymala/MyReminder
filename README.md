@@ -573,6 +573,15 @@ $data = $db->query($query);
 // return json_encode($query->getRow());
 return $this->respond($data->getResult());
 ```
+#
+#### CompositeDisposable RXJava
+```java
+
+private final CompositeDisposable compositeDisposable = new CompositeDisposable();
+compositeDisposable.add(
+    apiService.registerDeview()..
+);
+```
 
 ---
 
