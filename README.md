@@ -582,6 +582,13 @@ compositeDisposable.add(
     apiService.registerDeview()..
 );
 ```
+#
+#### SD_SO_MAIN 
+```
+search on google `leveling query id parent_id mysql`.
+```
+
+[Recomended](https://stackoverflow.com/questions/20215744/how-to-create-a-mysql-hierarchical-recursive-query)
 
 ---
 
