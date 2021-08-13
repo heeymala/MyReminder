@@ -559,7 +559,10 @@ public String requestToString(Response response) {
 
 - CI3
 ```php
-soon
+$sql = "select * from users order by id desc;";
+$query = $this->db->query($sql);
+return $query->result_array();
+//echo $d['id'];;
 ```
 
 - CI4
