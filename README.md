@@ -489,6 +489,12 @@ Log.d(getClass().getSimpleName(), "onCre_ate: "+read.get(i).toJson());
 public String toJson() {
     return new GsonBuilder().create().toJson(this, Table1.class);
 }
+
+//with json indent
+@Override
+public String toString() {
+    return new GsonBuilder().setPrettyPrinting().create().toJson(this, S_Maintenace_Header.class);
+}
 ```
 ```java
 Gson gson = new Gson();
