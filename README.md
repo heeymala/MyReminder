@@ -596,6 +596,21 @@ compositeDisposable.add(
 ```
 search on google `leveling query id parent_id mysql`.
 ```
+#
+#### Base64 String
+```
+import org.apache.commons.codec.binary.Base64;
+
+Strig str = "gzeinnumer";
+
+// Encode data on your side using BASE64
+byte[] bytesEncoded = Base64.encodeBase64(str.getBytes());
+Log.d(TAG,"encoded value is " + new String(bytesEncoded));
+
+// Decode data on other side, by processing encoded data
+byte[] valueDecoded = Base64.decodeBase64(bytesEncoded);
+Log.d(TAG,"Decoded value is " + new String(valueDecoded));
+```
 
 [Recomended](https://stackoverflow.com/questions/20215744/how-to-create-a-mysql-hierarchical-recursive-query)
 
