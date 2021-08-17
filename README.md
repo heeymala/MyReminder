@@ -270,7 +270,7 @@ separated[0]; // this will contain "Fruit"
 separated[1]; // this will contain " they taste good"
 ```
 #
-#### Last . Checked
+#### Last Dot . Checked
 ```java
 if (holder.number.getText().length() > 0 && holder.number.getText().toString().endsWith(".")){
     holder.numberP.setError("Format salah");
