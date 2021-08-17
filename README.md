@@ -443,7 +443,7 @@ HttpLoggingInterceptor logging = new HttpLoggingInterceptor(new Logger() {
 });
 ```
 #
-#### Http Save Log
+#### Set Drawable
 ```java
 myImgView.setImageDrawable(getResources().getDrawable(R.drawable.ic_arrow_down));
 myImgView.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.ic_arrow_down));
