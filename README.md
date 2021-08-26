@@ -614,6 +614,13 @@ Log.d(TAG,"Decoded value is " + new String(valueDecoded));
 
 [Recomended](https://stackoverflow.com/questions/20215744/how-to-create-a-mysql-hierarchical-recursive-query)
 
+#
+#### Flutter Update
+```
+flutter channel master
+flutter upgrade
+```
+
 ---
 
 ```
