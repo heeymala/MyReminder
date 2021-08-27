@@ -621,6 +621,13 @@ flutter channel master
 flutter upgrade
 ```
 
+#
+#### CI4 Redirect
+```php
+return redirect()->to('url'); 
+return redirect()->route('named_route');
+```
+
 ---
 
 ```
