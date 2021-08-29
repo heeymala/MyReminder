@@ -628,6 +628,15 @@ return redirect()->to('url');
 return redirect()->route('named_route');
 ```
 
+#
+#### Flutter Row Center
+```dart
+Row(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: []
+)
+```
+
 ---
 
 ```
